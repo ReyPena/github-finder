@@ -1,21 +1,21 @@
 {
-  "name": "pokedex",
+  "name": "gitSearch",
   "version": "0.0.1",
-  "description": "Pokedex using pokemon api.",
+  "description": "gitSearch using pokemon api.",
   "main": "core/server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ReyPena/pokedex.git"
+    "url": "git+https://github.com/ReyPena/gitSearch.git"
   },
   "author": "Rey",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ReyPena/pokedex/issues"
+    "url": "https://github.com/ReyPena/gitSearch/issues"
   },
-  "homepage": "https://github.com/ReyPena/pokedex#readme",
+  "homepage": "https://github.com/ReyPena/gitSearch#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
     "cors": "^2.7.1",

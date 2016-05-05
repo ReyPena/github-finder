@@ -26,6 +26,8 @@ var paths = {
   ],
   // css libraries
   scssLibs: [
+    // this is the theme for bootstrap
+    "./core/app/style/libs/paper.css",
     // this is my own css
     "./core/app/**/*.scss"
   ]

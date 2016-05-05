@@ -1,17 +1,10 @@
-html{
-  position: relative;
-  &, body{
-    min-height: 100%;
-    width: 100%;
-  }
-  body{
-    margin: 0;
-  }
-}
-// //components
+
+
+//components
 @import "components/_spiner.scss";
 // @import "components/_footer.scss";
-// // pages
+
+// pages
 @import "pages/_home.scss";
 // @import "pages/_skills.scss";
 // @import "pages/_experience.scss";

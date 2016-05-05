@@ -2,7 +2,7 @@ var express = require("express")
   , cors = require("cors")
   , bodyParser = require("body-parser")
   , mongoose = require("mongoose")
-  , mongoUri = "mongodb://localhost:27017/pokedex"
+  , mongoUri = "mongodb://localhost:27017/gitSearch"
   , app = express()
   , port = 8080;
 

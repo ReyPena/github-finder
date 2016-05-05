@@ -1,18 +1,18 @@
-angular.module("pokedex").config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+angular.module("gitSearch").config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
-        .state("main", {
+        .state("home", {
             url: "/",
-            templateUrl: "../views/routeViews/pokedex/pokedex.html",
-            controller: "pokedexCtrl"
+            templateUrl: "../views/routeViews/home/home.html",
+            controller: "homeCtrl"
         })
-        .state("pokemon", {
-            url: "/pokemon/:id",
-            templateUrl: "../views/routeViews/pokemon/pokemon.html",
-            controller: "pokemonCtrl"
+        .state("profile", {
+            url: "/profile/:id",
+            templateUrl: "../views/routeViews/profile/profile.html",
+            controller: "profileCtrl"
         })
         .state("about", {
             url: "/about",
-            templateUrl: "../views/routeViews/about/about.html",
+            templateUrl: "../views/routeViews/about/about.html"
         });
     $urlRouterProvider
         .otherwise("/");

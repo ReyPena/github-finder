@@ -1,12 +1,12 @@
 {
-  "name": "pokedex",
-  "description": "Pokedex using pokemon api.",
+  "name": "gitSearch",
+  "description": "gitSearch using pokemon api.",
   "main": "core/server/server.js",
   "authors": [
     "Rey"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/ReyPena/pokedex",
+  "homepage": "https://github.com/ReyPena/gitSearch",
   "ignore": [
     "**/.*",
     "node_modules",

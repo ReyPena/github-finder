@@ -1,1 +1,1 @@
-angular.module("pokedex", ["ui.router"]);
+angular.module("gitSearch", ["ui.router"]);
