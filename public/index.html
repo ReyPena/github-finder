@@ -11,20 +11,20 @@
 
 <body>
 
-    <!-- <spiner></spiner> -->
+
+    <div class="row">
+      <div class="navi col-xs-2 navbar-fixed-top">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a ui-sref="home"><i class="fa fa-2x fa-home" aria-hidden="true"></i> Home</a></li>
+          <li><a ui-sref="about"><i class="fa fa-2x fa-user" aria-hidden="true"></i> About</a></li>
+          <li><a href="https://developer.github.com/v3/"><i class="fa fa-2x fa-github-alt" aria-hidden="true"></i> Power By GitHub Api</a></li>
+        </ul>
+      </div>
+    </div>
 
     <div ui-view></div>
+    <!-- <spiner></spiner> -->
 
-    <footer class="navbar navbar-default navbar-fixed-bottom">
-        <div class="container-fluid">
-            <ul class="nav navbar-nav pull-right">
-                <li> <a class="pull-right" ui-sref="about">About</a> </li>
-                <li><label for="inputEmail" class="col-lg-2 control-label">Email</label>Power By GitHub Api</li>
-            </ul>
-            <div class="navbar-text">
-            </div>
-        </div>
-    </footer>
 
 
     <script src="scripts/mainScripts.js"></script>

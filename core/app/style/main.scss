@@ -1,20 +1,24 @@
-html, body {
+body,
+html {
     height: 100%;
 }
-.container{
-  margin-top: 2%;
+.container {
+    margin-top: 2%;
 }
 
-.mid{
-  margin-top: 20%;
+.navi{
+  margin-top: 8%;
+  padding: 0;
 }
+
+mid{
+  margin-top: 30%;
+}
+
 //components
 @import "components/_spiner.scss";
-
 // @import "components/_footer.scss";
-
 // pages
-@import "pages/_profiles.scss";
-// @import "pages/_skills.scss";
+@import "pages/_profiles.scss"; // @import "pages/_skills.scss";
 // @import "pages/_experience.scss";
 // @import "pages/_projects.scss";

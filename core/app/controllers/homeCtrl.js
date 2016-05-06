@@ -5,15 +5,13 @@ angular.module("gitSearch").controller("homeCtrl", function($scope, homeService)
             $scope.user = response;
             $scope.name = " ";
         });
-        $( "form" ).removeClass( "mid" );
     };
 
-    $( "input" ).focusout(function () {
-      $( "input" ).addClass("text-center");
-      console.log("nothere");
+    $("input").focusout(function() {
+        $("input").addClass("text-center");
     });
-    $( "input" ).focusin(function () {
-      $( "input" ).removeClass("text-center");
+    $("input").focusin(function() {
+        $("input").removeClass("text-center");
     });
 
     $scope.usersSave = [];
@@ -21,17 +19,34 @@ angular.module("gitSearch").controller("homeCtrl", function($scope, homeService)
     $scope.save = function(user) {
         if ($scope.usersSave.length === 0) {
             $scope.usersSave.push(user);
+            $scope.saveLocal();
         } else {
-            for (var i = 0; i < $scope.usersSave.length; i++) {
-                if ($scope.usersSave[i] != user) {
-                    $scope.usersSave.push(user);
-                }
+            if ($scope.usersSave.indexOf(user) === -1) {
+                $scope.usersSave.push(user);
+                $scope.saveLocal();
             }
         }
     };
 
     $scope.delete = function(index) {
         $scope.usersSave.splice(index, 1);
+        $scope.saveLocal();
     };
+
+    $scope.saveLocal = function() {
+        var str = JSON.stringify($scope.usersSave);
+        localStorage.setItem("usersLocal", str);
+    };
+
+    $scope.getLocal = function() {
+        var str = localStorage.getItem("usersLocal");
+        $scope.usersSave = JSON.parse(str);
+
+        if (!str) {
+            $scope.usersSave = [];
+        }
+    };
+
+    $scope.getLocal();
 
 });

@@ -1,6 +1,6 @@
 <div class="container">
 
-    <form class="form-horizontal mid">
+    <form class="form-horizontal">
         <fieldset>
             <div class="form-group">
                 <label for="search" class="col-md-1 control-label"><img src="./assets/img/others/logo.png" alt="octocat" height="50" /></label>
@@ -49,7 +49,7 @@
     <hr ng-if="usersSave[0].name">
 
     <div class="panel panel-default" ng-if="usersSave">
-        <div class="panel-body" ng-repeat="userSave in usersSave">
+        <div class="panel-body" ng-repeat="userSave in usersSave track by $id($index)">
             <div class="row">
                 <div class="col-md-3">
                     <img src="{{userSave.avatar_url}}" alt="{{userSave.login}}" height="200" />
