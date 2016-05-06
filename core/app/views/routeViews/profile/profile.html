@@ -24,17 +24,23 @@
 
             <h2 class="text-center">Repos</h2>
 
+            <br>
+
             <div class="row">
               <div class="col-md-3" ng-repeat="repo in repos">
                 <div class="panel panel-primary text-center">
-                  <div class="panel-heading">
+                  <div class="panel-heading"  href="https://www.google.com/">
                     <h3 class="panel-title">{{repo.name}}</h3>
                   </div>
-                  <div class="panel-body" ng-if="repo.description">
+                  <div class="panel-body description" ng-if="repo.description">
                     {{repo.description}}
                   </div>
-                  <div class="panel-body" ng-if="!repo.description">
+                  <div class="panel-body description" ng-if="!repo.description">
                     Sorry no description avalible
+                  </div>
+                  <div class="panel-footer">
+                    <a class="link" href="{{repo.html_url}}">Link</a>
+                    <a class="link" href="{{repo.html_url + '/archive/master.zip'}}" rel="nofollow">Download ZIP</a>
                   </div>
                 </div>
               </div>
