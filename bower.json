@@ -6,7 +6,7 @@
     "Rey"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/ReyPena/gitSearch",
+  "homepage": "https://github.com/ReyPena/github-finder",
   "ignore": [
     "**/.*",
     "node_modules",
