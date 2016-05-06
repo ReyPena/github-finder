@@ -1,12 +1,15 @@
 <div class="container">
 
-    <form class="form-horizontal">
+    <form class="form-horizontal mid">
         <fieldset>
             <div class="form-group">
-                <input ng-model="name" class="form-control" type="text" name="name" placeholder="User Name">
+                <label for="search" class="col-md-1 control-label"><img src="./assets/img/others/logo.png" alt="octocat" height="50" /></label>
+                <div class="col-md-11">
+                    <input ng-model="name" id="search" class="form-control text-center" type="text" name="name" placeholder="User Name">
+                </div>
             </div>
             <div class="form-group">
-                <button ng-click="search()" class="btn btn-primary center-block" type="submit" name="button">Search</button>
+                <button ng-click="search()" class="btn btn-primary pull-right" type="submit" name="button">Search</button>
             </div>
 
         </fieldset>
@@ -26,13 +29,16 @@
                     </h2>
                     <h4>
                       {{user.login}}
-                    </h4> {{user.email}}
+                    </h4>
+                    <a href="mailto:{{user.email}}">
+                      {{user.email}}
+                    </a>
                 </div>
                 <div class="col-md-4">
                     <div class="list-group">
-                        <a ng-class="{active: hover1}" ng-mouseenter="hover1 = true" ng-mouseleave="hover1 = false" class="list-group-item" href="#">Repos<span class="badge">{{user.public_repos}}</span></a>
-                        <a ng-class="{active: hover2}" ng-mouseenter="hover2 = true" ng-mouseleave="hover2 = false" class="list-group-item" href="#">Followers<span class="badge">{{user.followers}}</span></a>
-                        <a ng-class="{active: hover3}" ng-mouseenter="hover3 = true" ng-mouseleave="hover3 = false" class="list-group-item" href="#">Following<span class="badge">{{user.following}}</span></a>
+                        <a ng-class="{active: hover1}" ng-mouseenter="hover1 = true" ng-mouseleave="hover1 = false" class="list-group-item" href="{{user.html_url}}">Repos<span class="badge">{{user.public_repos}}</span></a>
+                        <a ng-class="{active: hover2}" ng-mouseenter="hover2 = true" ng-mouseleave="hover2 = false" class="list-group-item" href="{{user.html_url  + '/followers'}}">Followers<span class="badge">{{user.followers}}</span></a>
+                        <a ng-class="{active: hover3}" ng-mouseenter="hover3 = true" ng-mouseleave="hover3 = false" class="list-group-item" href="{{user.html_url  + '/following'}}">Following<span class="badge">{{user.following}}</span></a>
                     </div>
                     <a class="btn btn-success pull-right" ng-click="save(user)">Save</a>
                 </div>
@@ -56,13 +62,16 @@
                     </h2>
                     <h4>
                       {{userSave.login}}
-                    </h4> {{userSave.email}}
+                    </h4>
+                    <a href="mailto:{{user.email}}">
+                      {{user.email}}
+                    </a>
                 </div>
                 <div class="col-md-4">
                     <div class="list-group">
-                        <a ng-class="{active: hover1}" ng-mouseenter="hover1 = true" ng-mouseleave="hover1 = false" class="list-group-item" href="#">Repos<span class="badge">{{userSave.public_repos}}</span></a>
-                        <a ng-class="{active: hover2}" ng-mouseenter="hover2 = true" ng-mouseleave="hover2 = false" class="list-group-item" href="#">Followers<span class="badge">{{userSave.followers}}</span></a>
-                        <a ng-class="{active: hover3}" ng-mouseenter="hover3 = true" ng-mouseleave="hover3 = false" class="list-group-item" href="#">Following<span class="badge">{{userSave.following}}</span></a>
+                        <a ng-class="{active: hover1}" ng-mouseenter="hover1 = true" ng-mouseleave="hover1 = false" class="list-group-item" href="{{user.html_url}}">Repos<span class="badge">{{userSave.public_repos}}</span></a>
+                        <a ng-class="{active: hover2}" ng-mouseenter="hover2 = true" ng-mouseleave="hover2 = false" class="list-group-item" href="{{user.followers_url}}">Followers<span class="badge">{{userSave.followers}}</span></a>
+                        <a ng-class="{active: hover3}" ng-mouseenter="hover3 = true" ng-mouseleave="hover3 = false" class="list-group-item" href="{{user.followers_url}}">Following<span class="badge">{{userSave.following}}</span></a>
                     </div>
                     <a class="btn btn-danger pull-right" ng-click="delete($index)">Delete</a>
                 </div>

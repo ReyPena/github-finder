@@ -8,7 +8,7 @@ angular.module("gitSearch").config(function($stateProvider, $urlRouterProvider, 
         .state("profile", {
             url: "/profile/:id",
             templateUrl: "../views/routeViews/profile/profile.html",
-            controller: "profileCtrl"
+            controller: "profileCtrl",
         })
         .state("about", {
             url: "/about",

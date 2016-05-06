@@ -1,4 +1,4 @@
-angular.module("gitSearch").service("porfileService", function($http) {
+angular.module("gitSearch").service("profileService", function($http) {
 
   var apiUrl = "https://api.github.com/users/";
 

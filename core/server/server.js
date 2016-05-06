@@ -1,20 +1,9 @@
-var express = require("express")
-  , cors = require("cors")
-  , bodyParser = require("body-parser")
-  , mongoose = require("mongoose")
-  , mongoUri = "mongodb://localhost:27017/gitSearch"
-  , app = express()
-  , port = 8080;
+var express = require("express"),
+    app = express(),
+    port = process.env.PORT || 8080;
 
 app.use(express.static("./public"));
-app.use(bodyParser.json());
-app.use(cors());
 
-mongoose.connect(mongoUri);
-mongoose.connection.once("open", function () {
-  console.log("connected" + mongoUri);
-});
-
-app.listen(port, function () {
-  console.log("listen " + port);
+app.listen(port, function() {
+    console.log("listen " + port);
 });

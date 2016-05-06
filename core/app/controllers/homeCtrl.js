@@ -3,9 +3,18 @@ angular.module("gitSearch").controller("homeCtrl", function($scope, homeService)
     $scope.search = function() {
         homeService.getProfile($scope.name).then(function(response) {
             $scope.user = response;
+            $scope.name = " ";
         });
-        $scope.name = " ";
+        $( "form" ).removeClass( "mid" );
     };
+
+    $( "input" ).focusout(function () {
+      $( "input" ).addClass("text-center");
+      console.log("nothere");
+    });
+    $( "input" ).focusin(function () {
+      $( "input" ).removeClass("text-center");
+    });
 
     $scope.usersSave = [];
 
